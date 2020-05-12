@@ -1,1 +1,27 @@
-<p>movie-list works!</p>
+<section class="heading">
+    <span class='page-title font-weight-bold font-italic'>[{{ title }}]</span>
+    <a routerLink='/movie/create'>
+        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+    </a>
+</section>
+<table *ngIf="movies" class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies">
+            <td>{{ movie.id }}</td>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.year }}</td>
+            <td>
+                <a routerLink='/movie/detail/{{movie.id}}'>Detail</a> | 
+                <a routerLink='/movie/edit/{{movie.id}}'>Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
