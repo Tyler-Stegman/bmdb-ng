@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-actor-edit',
-  templateUrl: './actor-maint-shared/actor-maint.component.html',
+  templateUrl: '../actor-maint-shared/actor-maint.component.html',
   styleUrls: ['./actor-edit.component.css']
 })
 export class ActorEditComponent implements OnInit {

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actor-create',
-  templateUrl: './actor-maint-shared/movie-maint.component.html',
+  templateUrl: '../actor-maint-shared/actor-maint.component.html',
   styleUrls: ['./actor-create.component.css']
 })
 export class ActorCreateComponent implements OnInit {

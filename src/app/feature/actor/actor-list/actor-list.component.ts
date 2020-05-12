@@ -16,7 +16,6 @@ export class ActorListComponent implements OnInit {
   ngOnInit(): void {
     this.actorSvc.list().subscribe(
       jr => {
-        console.log("jr:", jr);
         this.actors = jr.data as Actor[];
         console.log("List of actors: ", this.actors);
       }

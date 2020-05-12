@@ -12,7 +12,7 @@ import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.compon
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: MovieListComponent}, 
+  {path: 'home', component: ActorListComponent}, 
   {path: 'movie/list', component: MovieListComponent}, 
   {path: 'movie/create', component: MovieCreateComponent}, 
   {path: 'movie/detail/:id', component: MovieDetailComponent}, 
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'actor/create', component: ActorCreateComponent}, 
   {path: 'actor/detail/:id', component: ActorDetailComponent}, 
   {path: 'actor/edit/:id', component: ActorEditComponent}, 
-  {path: '**', component: MovieListComponent} 
+  {path: '**', component: ActorListComponent} 
 ];
 
 @NgModule({

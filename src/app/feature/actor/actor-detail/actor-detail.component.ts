@@ -16,7 +16,7 @@ export class ActorDetailComponent implements OnInit {
   constructor(private actorSvc: ActorService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(parms => this.actorId = parms["id"]);
+    this.route.params.subscribe(parms => this.actorId = parms['id']);
     this.actorSvc.get(this.actorId).subscribe(jr => {
       this.actor = jr.data as Actor;
       console.log("Actor Found!", this.actor);
