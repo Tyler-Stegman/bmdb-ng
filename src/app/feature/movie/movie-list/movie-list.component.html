@@ -1,7 +1,7 @@
 <section class="heading">
     <span class='page-title font-weight-bold font-italic'>[{{ title }}]</span>
     <a routerLink='/movie/create'>
-        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+        <img width='20' height='20' src='assets/add-icon.png' title='Add Movie'>
     </a>
 </section>
 <table *ngIf="movies" class="table table-sm table-striped">
@@ -19,8 +19,12 @@
             <td>{{ movie.title }}</td>
             <td>{{ movie.year }}</td>
             <td>
-                <a routerLink='/movie/detail/{{movie.id}}'>Detail</a> | 
-                <a routerLink='/movie/edit/{{movie.id}}'>Edit</a>
+                <a routerLink='/movie/detail/{{movie.id}}'>
+                    <img width='20' height='20' src='assets/details.png' title='Movie Details'>
+                </a> | 
+                <a routerLink='/movie/edit/{{movie.id}}'>
+                    <img width='20' height='20' src='assets/pencil-icon.png' title='Edit Movie'>
+                </a>
             </td>
         </tr>
     </tbody>
