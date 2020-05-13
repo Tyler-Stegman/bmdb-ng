@@ -16,7 +16,7 @@ import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.co
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: CreditListComponent}, 
+  {path: 'home', component: MovieListComponent}, 
   {path: 'movie/list', component: MovieListComponent}, 
   {path: 'movie/create', component: MovieCreateComponent}, 
   {path: 'movie/detail/:id', component: MovieDetailComponent}, 
@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'credit/create', component: CreditCreateComponent}, 
   {path: 'credit/detail/:id', component: CreditDetailComponent}, 
   {path: 'credit/edit/:id', component: CreditEditComponent},
-  {path: '**', component: CreditListComponent} 
+  {path: '**', component: MovieListComponent} 
 ];
 
 @NgModule({

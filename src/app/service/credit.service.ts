@@ -4,6 +4,7 @@ import { JsonResponse } from '../model/json-response.class';
 import { Observable } from 'rxjs';
 import { Credit } from '../model/credit.class';
 
+
 const url: string = "http://localhost:8080/credits/";
 
 @Injectable({
@@ -27,5 +28,11 @@ export class CreditService {
   }
   delete(id: number): Observable<JsonResponse>{
     return this.http.delete(url+id) as Observable<JsonResponse>;
+  }
+  listMovieByActorId(id: number): Observable<JsonResponse>{
+    return this.http.get(url+"/by-actor-id/"+id) as Observable<JsonResponse>;
+  }
+  listActorsByMovieId(id: number): Observable<JsonResponse>{
+    return this.http.get(url+"/by-movie-id/"+id) as Observable<JsonResponse>;
   }
 }

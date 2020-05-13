@@ -26,6 +26,15 @@
                 <td><input [(ngModel)]="actor.birthDate" class="rounded" type="text" disabled></td>
             </tr>
         </table>
+        <h4>Film Credits</h4>
+        <table class="table table-sm">
+            <tr>
+                <th>Films</th>
+            </tr>
+            <tr *ngFor="let credit of credits">
+                <td><input [(ngModel)]="credit.movie.title" class="rounded" type="text" size="50" disabled></td>
+            </tr>
+        </table>
     </main>
     <span>
         <span><a routerLink="/actor/edit/{{actor.id}}" class="btn btn-sm btn-warning">Edit</a></span>
